@@ -1,0 +1,272 @@
+/* ============================================================
+   ARC4 — Colors & Type
+   ------------------------------------------------------------
+   Aerospace-minimal system ported to Arctic luxury.
+   Pure black canvas, spectral white, and a single accent
+   drawn from the aurora. Typography is industrial DIN —
+   universal uppercase, positive tracking, two weights.
+   ============================================================ */
+
+/* ---- Fonts --------------------------------------------------
+   Barlow is the closest royalty-free match to D-DIN on Google
+   Fonts. If you have D-DIN / D-DIN-Bold licensed, drop the
+   .ttf/.woff2 files into /fonts and swap the @font-face
+   definitions below. Flagged substitution.
+   ------------------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap');
+
+:root {
+  /* === Core palette ======================================= */
+  --space-black:      #000000;   /* page background, the void */
+  --space-black-50:   rgba(0,0,0,0.5);    /* text-legibility overlay */
+  --space-black-70:   rgba(0,0,0,0.7);
+  --space-black-85:   rgba(0,0,0,0.85);
+
+  --spectral-white:   #f0f0fa;   /* primary text — slight blue-violet tint */
+  --white-100:        #ffffff;   /* hover only */
+
+  /* === Ghost / interactive =============================== */
+  --ghost-surface:    rgba(240, 240, 250, 0.10);
+  --ghost-surface-hi: rgba(240, 240, 250, 0.20);
+  --ghost-border:     rgba(240, 240, 250, 0.35);
+  --ghost-border-lo:  rgba(240, 240, 250, 0.15);
+
+  /* === Aurora accent =====================================
+     Used *sparingly* — status dots, highlight rules, the
+     occasional hairline. Never as a fill color for blocks. */
+  --aurora:           #7dd3b8;   /* soft mint-teal, borealis */
+  --aurora-dim:       rgba(125, 211, 184, 0.35);
+
+  /* === Semantic FG / BG =================================== */
+  --bg:               var(--space-black);
+  --fg:               var(--spectral-white);
+  --fg-dim:           rgba(240, 240, 250, 0.65);
+  --fg-muted:         rgba(240, 240, 250, 0.45);
+  --fg-faint:         rgba(240, 240, 250, 0.25);
+
+  /* === Type families ===================================== */
+  --font-display: 'Barlow', 'D-DIN-Bold', 'D-DIN', Arial, Verdana, sans-serif;
+  --font-body:    'Barlow', 'D-DIN', Arial, Verdana, sans-serif;
+
+  /* === Type scale (px) =================================== */
+  --fs-display:   48px;  /* hero */
+  --fs-h1:        40px;
+  --fs-h2:        32px;
+  --fs-h3:        22px;
+  --fs-body:      16px;
+  --fs-nav-bold:  13px;
+  --fs-nav:       12px;
+  --fs-caption:   12px;
+  --fs-micro:     10px;
+
+  /* === Letter-spacing (positive only, aerospace stencil) == */
+  --ls-display:   0.96px;
+  --ls-h1:        0.9px;
+  --ls-h2:        0.8px;
+  --ls-nav:       1.17px;
+  --ls-caption:   1.17px;
+  --ls-micro:     1px;
+
+  /* === Line heights (tight, mission-critical) ============ */
+  --lh-tight:     0.94;
+  --lh-flat:      1.00;
+  --lh-body:      1.60;
+  --lh-relaxed:   2.00;
+
+  /* === Spacing (8pt base, minimal) ======================= */
+  --s-3:   3px;
+  --s-5:   5px;
+  --s-8:   8px;
+  --s-12:  12px;
+  --s-15:  15px;
+  --s-18:  18px;
+  --s-20:  20px;
+  --s-24:  24px;
+  --s-30:  30px;
+  --s-48:  48px;
+  --s-72:  72px;
+
+  /* === Radii ============================================= */
+  --r-sharp:  4px;
+  --r-button: 32px;
+
+  /* === Motion ============================================
+     Slow, cinematic. Nothing snappy — think film cuts, not
+     spring animations. */
+  --ease-cine:   cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-short:   180ms;
+  --dur-med:     420ms;
+  --dur-long:    900ms;
+
+  /* === Layout ===========================================*/
+  --viewport-section: 100vh;
+}
+
+/* ============================================================
+   Resets — minimal
+   ============================================================ */
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+/* ============================================================
+   Semantic type classes — use these instead of raw tags when
+   possible. All uppercase, positive tracking. This IS the voice.
+   ============================================================ */
+
+.t-display {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  font-weight: 700;
+  line-height: var(--lh-flat);
+  letter-spacing: var(--ls-display);
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+.t-h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  line-height: var(--lh-flat);
+  letter-spacing: var(--ls-h1);
+  text-transform: uppercase;
+}
+
+.t-h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: var(--lh-flat);
+  letter-spacing: var(--ls-h2);
+  text-transform: uppercase;
+}
+
+.t-h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.t-body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: var(--lh-body);
+  color: var(--fg);
+}
+
+.t-nav-bold {
+  font-family: var(--font-body);
+  font-size: var(--fs-nav-bold);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+}
+
+.t-nav {
+  font-family: var(--font-body);
+  font-size: var(--fs-nav);
+  font-weight: 400;
+  line-height: var(--lh-relaxed);
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+}
+
+.t-caption-bold {
+  font-family: var(--font-body);
+  font-size: var(--fs-caption);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-caption);
+  text-transform: uppercase;
+}
+
+.t-caption {
+  font-family: var(--font-body);
+  font-size: var(--fs-caption);
+  font-weight: 400;
+  line-height: var(--lh-flat);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.t-micro {
+  font-family: var(--font-body);
+  font-size: var(--fs-micro);
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-micro);
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+
+/* ============================================================
+   The lone component: the ghost button.
+   ============================================================ */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-12);
+  padding: var(--s-18) calc(var(--s-18) * 1.75);
+  background: var(--ghost-surface);
+  border: 1px solid var(--ghost-border);
+  border-radius: var(--r-button);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--fs-nav-bold);
+  font-weight: 700;
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--dur-short) var(--ease-cine),
+              color var(--dur-short) var(--ease-cine);
+}
+.btn-ghost:hover {
+  background: var(--ghost-surface-hi);
+  color: var(--white-100);
+}
+
+/* ============================================================
+   Utilities
+   ============================================================ */
+.scene {
+  position: relative;
+  min-height: var(--viewport-section);
+  width: 100%;
+  overflow: hidden;
+}
+.scene__img {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.scene__overlay {
+  position: absolute; inset: 0;
+  background: var(--space-black-50);
+  /* Soft vertical ramp so bottoms of scenes go darker for copy */
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.75) 100%);
+}
+.scene__content {
+  position: relative;
+  z-index: 2;
+  padding: var(--s-48);
+}
+
+.hairline { height: 1px; background: var(--ghost-border-lo); border: 0; }

@@ -14,6 +14,92 @@ function Hero({ onEnquire }) {
     return () => window.removeEventListener('resize', update);
   }, []);
 
+  // ===== MOBILE LAYOUT =====
+  if (isMobile) {
+    return (
+      <Scene
+        id="hero"
+        label="01 Hero"
+        image="https://images.unsplash.com/photo-1483347756197-71ef80e95f73?q=80&w=2400"
+        align="center"
+        overlay="linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.85) 100%)"
+      >
+        <div style={{
+          width: '100%',
+          padding: '24px 24px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 20,
+          maxWidth: '100%',
+        }}>
+          {/* Eyebrow with aurora dot */}
+          <EyebrowDot style={{ marginBottom: 0, fontSize: 11 }}>
+            ARC4 Collective · Arctic Lapland · Est. Inari
+          </EyebrowDot>
+
+          {/* Main headline */}
+          <div style={{
+            fontFamily: "'Barlow', Arial, sans-serif",
+            fontSize: 'clamp(40px, 10vw, 64px)',
+            fontWeight: 700,
+            lineHeight: 0.98,
+            letterSpacing: 1.2,
+            textTransform: 'uppercase',
+            color: '#f0f0fa',
+            margin: 0,
+            textWrap: 'balance',
+          }}>
+            Arctic Experience<br/>Designers.
+          </div>
+
+          {/* Body copy */}
+          <Body max={540} dim={0.85} style={{ marginTop: 0, fontSize: 16 }}>
+            Bespoke offsites, expeditions and programmes for corporate groups and private clients.
+            Designed and produced across the Finnish Lapland to the wider Scandinavian Arctic.
+          </Body>
+
+          {/* Buttons - full width */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 12 }}>
+            <button onClick={onEnquire} style={{
+              width: '100%',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12,
+              padding: '14px 20px',
+              background: 'rgba(240,240,250,0.10)',
+              border: '1px solid rgba(240,240,250,0.35)',
+              borderRadius: 32,
+              color: '#f0f0fa',
+              fontFamily: "'Barlow', Arial, sans-serif",
+              fontSize: 13, fontWeight: 700, letterSpacing: 1.17,
+              textTransform: 'uppercase',
+              cursor: 'pointer',
+              transition: 'background 220ms cubic-bezier(0.16,1,0.3,1)',
+            }}>
+              Enquire <ArrowR size={13} />
+            </button>
+            <a href="#experiences" style={{
+              width: '100%',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12,
+              padding: '14px 20px',
+              background: 'transparent',
+              border: '1px solid rgba(240,240,250,0.25)',
+              borderRadius: 32,
+              color: '#f0f0fa',
+              fontFamily: "'Barlow', Arial, sans-serif",
+              fontSize: 13, fontWeight: 700, letterSpacing: 1.17,
+              textTransform: 'uppercase',
+              textDecoration: 'none',
+              cursor: 'pointer',
+              transition: 'background 220ms cubic-bezier(0.16,1,0.3,1)',
+            }}>
+              Experiences <ArrowD size={13} />
+            </a>
+          </div>
+        </div>
+      </Scene>
+    );
+  }
+
+  // ===== DESKTOP LAYOUT =====
   return (
     <Scene
       id="hero"
@@ -22,7 +108,7 @@ function Hero({ onEnquire }) {
       align="bottom"
       overlay="linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.85) 100%)"
     >
-      {/* Corner callouts */}
+      {/* Corner callouts - desktop only */}
       <div style={{
         position: 'absolute', top: 110, right: 48,
         textAlign: 'right',
@@ -39,15 +125,15 @@ function Hero({ onEnquire }) {
         </div>
       </div>
 
-      {/* Headline block */}
+      {/* Headline block - desktop only */}
       <div className="rise-in" style={{ maxWidth: 1100 }}>
-        <EyebrowDot style={{ marginBottom: isMobile ? 6 : 20, fontSize: isMobile ? 11 : 13 }}>
+        <EyebrowDot style={{ marginBottom: 20, fontSize: 13 }}>
           ARC4 Collective · Arctic Lapland · Est. Inari
         </EyebrowDot>
         <Title size="display" max={1100}>
           Arctic Experience<br/>Designers.
         </Title>
-        <Body max={560} dim={0.85} style={{ marginTop: 28, fontSize: isMobile ? 16 : 18 }}>
+        <Body max={560} dim={0.85} style={{ marginTop: 28, fontSize: 18 }}>
           Bespoke offsites, expeditions and programmes for corporate groups and private clients.
           Designed and produced across the Finnish Lapland to the wider Scandinavian Arctic.
         </Body>
@@ -61,6 +147,7 @@ function Hero({ onEnquire }) {
         </div>
       </div>
 
+      {/* Metadata bar - desktop only */}
       <div className="hero-metadata-bar" style={{
         position: 'absolute', bottom: 24, left: 24, right: 24,
         display: 'grid', gap: 24,
@@ -72,15 +159,15 @@ function Hero({ onEnquire }) {
         <div className="hero-metadata-row">
           <div className="hero-metadata-item">
             <div className="hero-metadata-value" style={{ fontSize: 14 }}>4—60+</div>
-            <div className="hero-metadata-label" style={{ fontSize: isMobile ? 9 : 11 }}>Guest scale</div>
+            <div className="hero-metadata-label" style={{ fontSize: 11 }}>Guest scale</div>
           </div>
           <div className="hero-metadata-item">
             <div className="hero-metadata-value" style={{ fontSize: 14 }}>14H</div>
-            <div className="hero-metadata-label" style={{ fontSize: isMobile ? 9 : 11 }}>Polar night</div>
+            <div className="hero-metadata-label" style={{ fontSize: 11 }}>Polar night</div>
           </div>
           <div className="hero-metadata-item">
             <div className="hero-metadata-value" style={{ fontSize: 14 }}>-32°C</div>
-            <div className="hero-metadata-label" style={{ fontSize: isMobile ? 9 : 11 }}>Mean Jan low</div>
+            <div className="hero-metadata-label" style={{ fontSize: 11 }}>Mean Jan low</div>
           </div>
         </div>
       </div>

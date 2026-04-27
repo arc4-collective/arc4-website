@@ -50,8 +50,8 @@ function Scene({ id, image, label, children, align = 'left', minHeight = '100vh'
 }
 
 // ----- Labels, titles, body ----------------------------------
-function Eyebrow({ children, style }) {
-  return <div style={{
+function Eyebrow({ children, style, className }) {
+  return <div className={className} style={{
     fontFamily: "'Barlow', Arial, sans-serif",
     fontSize: 11, fontWeight: 400, letterSpacing: 1.6,
     textTransform: 'uppercase', color: 'rgba(240,240,250,0.65)',
@@ -61,9 +61,9 @@ function Eyebrow({ children, style }) {
   }}>{children}</div>;
 }
 
-function EyebrowDot({ children }) {
+function EyebrowDot({ children, style, className }) {
   return (
-    <Eyebrow>
+    <Eyebrow style={style} className={className}>
       <span style={{
         width: 6, height: 6, borderRadius: 999,
         background: '#7dd3b8', boxShadow: '0 0 14px rgba(125,211,184,0.6)',
@@ -73,7 +73,7 @@ function EyebrowDot({ children }) {
   );
 }
 
-function Title({ children, size = 'display', max = 920, color, tag: Tag = 'h2', style }) {
+function Title({ children, size = 'display', max = 920, color, tag: Tag = 'h2', style, className }) {
   const sizes = {
     display: { fs: 'clamp(44px, 6.2vw, 88px)', ls: 1.2 },
     h1:      { fs: 'clamp(36px, 4.4vw, 60px)', ls: 1.0 },

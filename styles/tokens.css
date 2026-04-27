@@ -323,6 +323,8 @@ html, body {
 
 .hero-metadata-bar {
   width: 100%;
+  background: transparent;
+  background-color: transparent;
 }
 
 .hero-metadata-row {
@@ -374,6 +376,25 @@ html, body {
   .hero-metadata-row {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+}
+
+@media (min-width: 769px) {
+  .hero-metadata-bar {
+    padding-bottom: 32px;
+    background: transparent;
+    background-color: transparent;
+  }
+  .hero-metadata-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #f0f0fa;
+  }
+  .hero-metadata-label {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(240,240,250,0.55);
+    letter-spacing: 1.5px;
   }
 }
 

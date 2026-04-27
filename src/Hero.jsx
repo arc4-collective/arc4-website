@@ -66,6 +66,8 @@ function Hero({ onEnquire }) {
         display: 'grid', gap: 24,
         paddingTop: 24,
         paddingRight: 48,
+        background: 'transparent',
+        backgroundColor: 'transparent',
       }}>
         <div className="hero-metadata-row">
           <div className="hero-metadata-item">

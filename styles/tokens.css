@@ -310,7 +310,7 @@ html, body {
 }
 
 .flex-gap-wide {
-  gap: 56px;
+  gap: 32px;
 }
 
 @media (max-width: 768px) {
@@ -320,7 +320,8 @@ html, body {
   .grid-5 { grid-template-columns: 1fr; gap: 16px; }
   .section-padding { padding: 80px 24px 60px; }
   .scene__content { padding: 60px 24px 36px; }
-  .flex-gap-wide { gap: 24px; }
+  .flex-gap-wide { gap: 16px; }
+  .hero-bottom-meta { left: 20px; right: 20px; }
 }
 
 /* ============================================================

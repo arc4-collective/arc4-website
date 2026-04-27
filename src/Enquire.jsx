@@ -1,5 +1,5 @@
 /* global React, Eyebrow, Title, Body, GhostButton, ArrowR, Hairline */
-const { useState, forwardRef, useImperativeHandle, useRef } = React;
+const { useState, forwardRef, useImperativeHandle, useRef, useCallback } = React;
 
 const Enquire = forwardRef(function Enquire(props, ref) {
   const [form, setForm] = useState({
@@ -9,6 +9,9 @@ const Enquire = forwardRef(function Enquire(props, ref) {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState(null);
   const nameRef = useRef(null);
+
+  const change = useCallback((k) => (e) => setForm(prev => ({ ...prev, [k]: e.target.value })), []);
+  const handleSizeChange = useCallback((s) => setForm(prev => ({ ...prev, size: s })), []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,8 +40,6 @@ const Enquire = forwardRef(function Enquire(props, ref) {
       setTimeout(() => nameRef.current?.focus(), 400);
     },
   }));
-
-  const change = (k) => (e) => setForm(f => ({ ...f, [k]: e.target.value }));
 
   const inputBase = {
     background: 'transparent',
@@ -198,7 +199,7 @@ const Enquire = forwardRef(function Enquire(props, ref) {
                     const active = form.size === s;
                     return (
                       <button type="button" key={s}
-                        onClick={() => setForm(f => ({ ...f, size: s }))}
+                        onClick={() => handleSizeChange(s)}
                         style={{
                           padding: '10px 14px',
                           background: active ? 'rgba(240,240,250,0.18)' : 'transparent',

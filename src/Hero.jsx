@@ -27,31 +27,37 @@ function Hero({ onEnquire }) {
         <div style={{
           width: '100%',
           padding: '24px 24px',
+          paddingBottom: 80,
           display: 'flex',
           flexDirection: 'column',
           gap: 20,
           maxWidth: '100%',
           alignItems: 'flex-start',
           textAlign: 'left',
+          justifyContent: 'flex-end',
+          height: '100%',
         }}>
-          {/* Eyebrow with aurora dot */}
-          <EyebrowDot style={{ marginBottom: 0, fontSize: 11 }}>
-            ARC4 Collective · Arctic Lapland · Est. Inari
-          </EyebrowDot>
+          {/* Eyebrow + Headline group - tight spacing */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {/* Eyebrow with aurora dot */}
+            <EyebrowDot style={{ marginBottom: 0, fontSize: 11 }}>
+              ARC4 Collective · Arctic Lapland · Est. Inari
+            </EyebrowDot>
 
-          {/* Main headline */}
-          <div style={{
-            fontFamily: "'Barlow', Arial, sans-serif",
-            fontSize: 'clamp(40px, 10vw, 64px)',
-            fontWeight: 700,
-            lineHeight: 0.98,
-            letterSpacing: 1.2,
-            textTransform: 'uppercase',
-            color: '#f0f0fa',
-            margin: 0,
-            textWrap: 'balance',
-          }}>
-            Arctic Experience<br/>Designers.
+            {/* Main headline */}
+            <div style={{
+              fontFamily: "'Barlow', Arial, sans-serif",
+              fontSize: 'clamp(40px, 10vw, 64px)',
+              fontWeight: 700,
+              lineHeight: 0.98,
+              letterSpacing: 1.2,
+              textTransform: 'uppercase',
+              color: '#f0f0fa',
+              margin: 0,
+              textWrap: 'balance',
+            }}>
+              Arctic Experience<br/>Designers.
+            </div>
           </div>
 
           {/* Body copy */}
@@ -61,7 +67,7 @@ function Hero({ onEnquire }) {
           </Body>
 
           {/* Buttons - left-aligned, auto width */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 12 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             <button onClick={onEnquire} style={{
               width: 'auto',
               display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 12,

@@ -322,3 +322,21 @@ html, body {
   .scene__content { padding: 60px 24px 36px; }
   .flex-gap-wide { gap: 24px; }
 }
+
+/* ============================================================
+   Navigation
+   ============================================================ */
+.nav-header {
+  padding: 28px 48px;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+@media (max-width: 768px) {
+  .nav-header { padding: 18px 24px; }
+  .desktop-nav { display: none; }
+}

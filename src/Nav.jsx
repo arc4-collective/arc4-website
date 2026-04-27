@@ -19,9 +19,9 @@ function Nav({ onEnquire, activeId }) {
   ];
 
   return (
-    <header style={{
+    <header className="nav-header" style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
-      padding: scrolled ? '18px 48px' : '28px 48px',
+      padding: scrolled ? '18px 24px' : '28px 24px',
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       background: scrolled ? 'linear-gradient(180deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0) 100%)' : 'linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%)',
       transition: 'padding 320ms cubic-bezier(0.16,1,0.3,1), background 320ms',

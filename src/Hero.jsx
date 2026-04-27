@@ -46,37 +46,31 @@ function Hero({ onEnquire }) {
         </div>
       </div>
 
-        <div className="hero-bottom-meta flex-gap-wide" style={{
-          position: 'absolute', bottom: 32, left: 48, right: 48,
-          display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between',
-        }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span style={{
-            fontFamily: "'Barlow', Arial, sans-serif",
-            fontSize: 10, letterSpacing: 1.6,
-            textTransform: 'uppercase', color: 'rgba(240,240,250,0.55)',
-          }}>Scroll</span>
-          <div style={{ width: 48, height: 1, background: 'rgba(240,240,250,0.35)' }} />
-        </div>
+      <div style={{
+        position: 'absolute', bottom: 24, left: 24, right: 24,
+        display: 'grid', gap: 24,
+        paddingTop: 24,
+      }}>
         <div style={{
-          display: 'flex',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+          gap: 24,
           fontFamily: "'Barlow', Arial, sans-serif",
-          fontSize: 10, letterSpacing: 1.6,
-          textTransform: 'uppercase', color: 'rgba(240,240,250,0.55)',
-          textAlign: 'right',
-          flexWrap: 'wrap',
+          textTransform: 'uppercase',
+          color: 'rgba(240,240,250,0.55)',
+          width: '100%',
         }}>
-          <div>
-            <div style={{ color: 'rgba(240,240,250,0.85)', fontWeight: 700, fontSize: 10, letterSpacing: 1 }}>-32°C</div>
-            <div style={{ marginTop: 4 }}>Mean Jan low</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <div style={{ color: 'rgba(240,240,250,0.85)', fontWeight: 700, fontSize: 14, letterSpacing: 1 }}>-32°C</div>
+            <div style={{ fontSize: 10, letterSpacing: 1.6 }}>Mean Jan low</div>
           </div>
-          <div>
-            <div style={{ color: 'rgba(240,240,250,0.85)', fontWeight: 700, fontSize: 10, letterSpacing: 1 }}>14H</div>
-            <div style={{ marginTop: 4 }}>Polar night</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <div style={{ color: 'rgba(240,240,250,0.85)', fontWeight: 700, fontSize: 14, letterSpacing: 1 }}>14H</div>
+            <div style={{ fontSize: 10, letterSpacing: 1.6 }}>Polar night</div>
           </div>
-          <div>
-            <div style={{ color: 'rgba(240,240,250,0.85)', fontWeight: 700, fontSize: 10, letterSpacing: 1 }}>4—60+</div>
-            <div style={{ marginTop: 4 }}>Guest scale</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <div style={{ color: 'rgba(240,240,250,0.85)', fontWeight: 700, fontSize: 14, letterSpacing: 1 }}>4—60+</div>
+            <div style={{ fontSize: 10, letterSpacing: 1.6 }}>Guest scale</div>
           </div>
         </div>
       </div>

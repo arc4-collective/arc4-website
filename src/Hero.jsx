@@ -29,7 +29,8 @@ function Hero({ onEnquire }) {
       {/* Headline block */}
       <div className="rise-in" style={{ maxWidth: 1100 }}>
         <EyebrowDot>ARC4 Collective · Arctic Lapland · Est. Inari</EyebrowDot>
-        <div className="hero-season-status hero-season-mobile" style={{ marginTop: 12, color: 'rgba(125,211,184,0.9)', fontFamily: "'Barlow', Arial, sans-serif", fontSize: 10, letterSpacing: 1.6, textTransform: 'uppercase' }}>
+        <div className="hero-season-status hero-season-mobile" style={{ marginTop: 12, color: 'rgba(125,211,184,0.9)', fontFamily: "'Barlow', Arial, sans-serif", fontSize: 10, letterSpacing: 1.6, textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: 999, background: '#7dd3b8' }} />
           Winter season 2027 · open for briefs
         </div>
         <Title size="display" max={1100}>
@@ -53,6 +54,7 @@ function Hero({ onEnquire }) {
         position: 'absolute', bottom: 24, left: 24, right: 24,
         display: 'grid', gap: 24,
         paddingTop: 24,
+        paddingRight: 48,
       }}>
         <div className="hero-metadata-row">
           <div className="hero-metadata-item">

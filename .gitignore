@@ -1,0 +1,6 @@
+# Ignore local working files
+uploads/
+.DS_Store
+node_modules/
+.env
+.env.local

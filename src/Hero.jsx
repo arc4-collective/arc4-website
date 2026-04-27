@@ -25,43 +25,39 @@ function Hero({ onEnquire }) {
         overlay="linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.85) 100%)"
       >
         <div style={{
-          width: '100%',
-          padding: '24px 24px',
-          paddingBottom: 80,
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          padding: '0 24px 80px 24px',
           display: 'flex',
           flexDirection: 'column',
-          gap: 20,
-          maxWidth: '100%',
+          gap: 16,
           alignItems: 'flex-start',
           textAlign: 'left',
-          justifyContent: 'flex-end',
-          height: '100%',
         }}>
-          {/* Eyebrow + Headline group - tight spacing */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-            {/* Eyebrow with aurora dot */}
-            <EyebrowDot style={{ marginBottom: 0, fontSize: 11 }}>
-              ARC4 Collective · Arctic Lapland · Est. Inari
-            </EyebrowDot>
+          {/* Eyebrow with aurora dot - one line */}
+          <EyebrowDot style={{ marginBottom: 0, fontSize: 9, letterSpacing: 0.8 }}>
+            ARC4 Collective · Arctic Lapland · Est. Inari
+          </EyebrowDot>
 
-            {/* Main headline */}
-            <div style={{
-              fontFamily: "'Barlow', Arial, sans-serif",
-              fontSize: 'clamp(40px, 10vw, 64px)',
-              fontWeight: 700,
-              lineHeight: 0.98,
-              letterSpacing: 1.2,
-              textTransform: 'uppercase',
-              color: '#f0f0fa',
-              margin: 0,
-              textWrap: 'balance',
-            }}>
-              Arctic Experience<br/>Designers.
-            </div>
+          {/* Main headline */}
+          <div style={{
+            fontFamily: "'Barlow', Arial, sans-serif",
+            fontSize: 'clamp(40px, 10vw, 64px)',
+            fontWeight: 700,
+            lineHeight: 0.98,
+            letterSpacing: 1.2,
+            textTransform: 'uppercase',
+            color: '#f0f0fa',
+            margin: 0,
+            textWrap: 'balance',
+          }}>
+            Arctic Experience<br/>Designers.
           </div>
 
           {/* Body copy */}
-          <Body max={540} dim={0.85} style={{ marginTop: 0, fontSize: 16 }}>
+          <Body max={540} dim={0.85} style={{ marginTop: 0, fontSize: 15 }}>
             Bespoke offsites, expeditions and programmes for corporate groups and private clients.
             Designed and produced across the Finnish Lapland to the wider Scandinavian Arctic.
           </Body>

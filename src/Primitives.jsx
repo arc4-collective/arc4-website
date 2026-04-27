@@ -38,11 +38,7 @@ function Scene({ id, image, label, children, align = 'left', minHeight = '100vh'
           background: overlay || 'linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.80) 100%)',
         }} />
       )}
-      <div style={{
-        position: 'relative', zIndex: 2,
-        width: '100%', minHeight,
-        padding: '120px 48px 72px',
-        display: 'flex', flexDirection: 'column',
+      <div className="scene__content" style={{
         justifyContent: align === 'bottom' ? 'flex-end' : 'center',
         alignItems: align === 'center' ? 'center' : 'flex-start',
         textAlign: align === 'center' ? 'center' : 'left',

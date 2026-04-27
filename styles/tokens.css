@@ -266,7 +266,59 @@ html, body {
 .scene__content {
   position: relative;
   z-index: 2;
-  padding: var(--s-48);
+  width: 100%;
+  min-height: var(--viewport-section);
+  padding: 120px 48px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .hairline { height: 1px; background: var(--ghost-border-lo); border: 0; }
+
+/* ============================================================
+   Responsive grid utilities
+   ============================================================ */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+}
+
+.section-padding {
+  padding: 140px 48px 120px;
+}
+
+.flex-gap-wide {
+  gap: 56px;
+}
+
+@media (max-width: 768px) {
+  .grid-2 { grid-template-columns: 1fr; gap: 32px; }
+  .grid-3 { grid-template-columns: 1fr; gap: 16px; }
+  .grid-4 { grid-template-columns: 1fr; gap: 16px; }
+  .grid-5 { grid-template-columns: 1fr; gap: 16px; }
+  .section-padding { padding: 80px 24px 60px; }
+  .scene__content { padding: 60px 24px 36px; }
+  .flex-gap-wide { gap: 24px; }
+}

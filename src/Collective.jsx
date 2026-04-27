@@ -37,10 +37,7 @@ function Collective() {
       position: 'relative', background: '#000', padding: '140px 48px 120px',
     }}>
       <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-        <div style={{
-          display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 64, alignItems: 'end',
-          marginBottom: 72,
-        }}>
+        <div className="grid-2" style={{ gap: 64, alignItems: 'end', marginBottom: 72 }}>
           <div>
             <Eyebrow>
               <span style={{ width: 20, height: 1, background: 'rgba(125,211,184,0.7)' }} />
@@ -58,12 +55,7 @@ function Collective() {
           </Body>
         </div>
 
-        <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0,1fr))', gap: 2,
-          borderTop: '1px solid rgba(240,240,250,0.15)',
-          borderBottom: '1px solid rgba(240,240,250,0.15)',
-          background: 'rgba(240,240,250,0.08)',
-        }}>
+        <div className="grid-4" style={{ gap: 2, borderTop: '1px solid rgba(240,240,250,0.15)', borderBottom: '1px solid rgba(240,240,250,0.15)', background: 'rgba(240,240,250,0.08)' }}>
           {MEMBERS.map((m, i) => (
             <div key={i} style={{ background: '#000', padding: '0 0 28px' }}>
               <div style={{

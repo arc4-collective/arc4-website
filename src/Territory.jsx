@@ -20,7 +20,7 @@ function Territory() {
           <span style={{ width: 20, height: 1, background: 'rgba(125,211,184,0.7)' }} />
           05 · The Territory
         </Eyebrow>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 80, alignItems: 'end' }}>
+        <div className="grid-2" style={{ gap: 80, alignItems: 'end' }}>
           <Title size="display" max={900}>
             Lapland.<br/>
             <span style={{ color: 'rgba(240,240,250,0.48)' }}>The last quiet<br/>north in Europe.</span>
@@ -32,15 +32,7 @@ function Territory() {
           </Body>
         </div>
 
-        {/* coordinates strip */}
-        <div style={{
-          marginTop: 120,
-          borderTop: '1px solid rgba(240,240,250,0.2)',
-          paddingTop: 28,
-          display: 'grid',
-          gridTemplateColumns: 'repeat(5, minmax(0,1fr))',
-          gap: 32,
-        }}>
+        <div className="grid-5" style={{ marginTop: 120, borderTop: '1px solid rgba(240,240,250,0.2)', paddingTop: 28 }}>
           {[
             ['68°54′N', 'Latitude'],
             ['27°01′E', 'Longitude'],
@@ -62,13 +54,7 @@ function Territory() {
           ))}
         </div>
 
-        {/* three-up reasons */}
-        <div style={{
-          marginTop: 72,
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, minmax(0,1fr))',
-          gap: 48,
-        }}>
+        <div className="grid-3" style={{ marginTop: 72, gap: 48 }}>
           {[
             ['Why here', 'The geography hasn\'t been tamed for tourism. The roads we use were built for reindeer herders, not coaches.'],
             ['Why winter', 'The polar night is four hours of blue, ten hours of black, and an aurora window most clients never experience uncrowded.'],

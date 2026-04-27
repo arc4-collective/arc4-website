@@ -32,7 +32,7 @@ function Positioning() {
         transform: shown ? 'translateY(0)' : 'translateY(24px)',
         transition: 'opacity 900ms cubic-bezier(0.16,1,0.3,1), transform 900ms cubic-bezier(0.16,1,0.3,1)',
       }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2.2fr', gap: 64, alignItems: 'start' }}>
+        <div className="grid-2" style={{ gap: 64, alignItems: 'start' }}>
           <div>
             <Eyebrow>
               <span style={{ width: 20, height: 1, background: 'rgba(125,211,184,0.7)' }} />
@@ -59,10 +59,7 @@ function Positioning() {
               produced to aerospace tolerances, executed in terrain that rewards precision.
             </Body>
             <Hairline style={{ marginTop: 72 }} />
-            <div style={{
-              display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0,1fr))',
-              gap: 48, marginTop: 32,
-            }}>
+            <div className="grid-3" style={{ gap: 48, marginTop: 32 }}>
               {[
                 ['Not an operator', 'Experience architects'],
                 ['Not an itinerary', 'A produced operation'],

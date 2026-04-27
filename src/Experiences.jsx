@@ -150,13 +150,11 @@ function ExperienceCard({ exp, index }) {
 
 function Experiences() {
   return (
-    <section id="experiences" data-screen-label="03 Experiences" style={{
+    <section id="experiences" data-screen-label="03 Experiences" className="section-padding" style={{
       position: 'relative', background: '#000',
-      padding: '140px 48px 120px',
     }}>
       <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-        <div style={{
-          display: 'grid', gridTemplateColumns: '1fr 1.8fr', gap: 64,
+        <div className="grid-2" style={{
           alignItems: 'end', marginBottom: 72,
         }}>
           <div>
@@ -177,11 +175,7 @@ function Experiences() {
           </div>
         </div>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
-          gap: 2,
-        }}>
+        <div className="grid-3">
           {EXPERIENCES.map((e, i) => <ExperienceCard key={e.id} exp={e} index={i} />)}
         </div>
 

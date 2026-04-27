@@ -24,7 +24,7 @@ function Corporate({ onEnquire }) {
     },
   ];
   return (
-    <section id="corporate" data-screen-label="04 Corporate" style={{
+    <section id="corporate" data-screen-label="04 Corporate" className="section-padding" style={{
       position: 'relative', minHeight: '100vh', overflow: 'hidden',
     }}>
       {/* Background photo, right half only on desktop */}
@@ -39,10 +39,9 @@ function Corporate({ onEnquire }) {
       }} />
       <div style={{
         position: 'relative', zIndex: 2,
-        padding: '140px 48px 120px',
         maxWidth: 1400, margin: '0 auto',
       }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 80, alignItems: 'start' }}>
+        <div className="grid-2" style={{ alignItems: 'start' }}>
           <div>
             <Eyebrow>
               <span style={{ width: 20, height: 1, background: 'rgba(125,211,184,0.7)' }} />
@@ -69,8 +68,7 @@ function Corporate({ onEnquire }) {
           </div>
 
           <div>
-            <div style={{
-              display: 'grid', gridTemplateColumns: '1fr 1fr',
+            <div className="grid-2" style={{
               gap: '1px',
               background: 'rgba(240,240,250,0.15)',
               border: '1px solid rgba(240,240,250,0.15)',

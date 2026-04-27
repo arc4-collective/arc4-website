@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <div style={{ background: '#000', color: '#f0f0fa', minHeight: '100vh' }}>
+    <div style={{ background: '#000', color: '#f0f0fa', minHeight: '100vh', overflowX: 'hidden' }}>
       <Nav onEnquire={goEnquire} activeId={activeId} />
       <main>
         <Hero onEnquire={goEnquire} />

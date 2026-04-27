@@ -29,10 +29,7 @@ function Footer() {
       borderTop: '1px solid rgba(240,240,250,0.1)',
     }}>
       <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-        <div style={{
-          display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr',
-          gap: 48,
-        }}>
+        <div className="grid-3" style={{ gap: 48 }}>
           <div>
             <img src="assets/arc4-wordmark.svg" alt="ARC4 Collective" style={{ height: 32, display: 'block' }} />
             <div style={{

@@ -46,12 +46,10 @@ function Hero({ onEnquire }) {
         </div>
       </div>
 
-      {/* bottom meta row */}
-      <div style={{
-        position: 'absolute', bottom: 32, left: 48, right: 48,
-        display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between',
-        gap: 32,
-      }}>
+        <div className="flex-gap-wide" style={{
+          display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between',
+          gap: 32,
+        }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <span style={{
             fontFamily: "'Barlow', Arial, sans-serif",
@@ -60,7 +58,7 @@ function Hero({ onEnquire }) {
           }}>Scroll</span>
           <div style={{ width: 48, height: 1, background: 'rgba(240,240,250,0.35)' }} />
         </div>
-        <div style={{
+        <div className="flex-gap-wide" style={{
           display: 'flex', gap: 56,
           fontFamily: "'Barlow', Arial, sans-serif",
           fontSize: 10, letterSpacing: 1.6,

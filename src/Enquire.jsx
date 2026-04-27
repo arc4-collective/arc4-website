@@ -88,10 +88,10 @@ const Enquire = forwardRef(function Enquire(props, ref) {
         background: 'linear-gradient(90deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.85) 55%, rgba(0,0,0,0.45) 100%)',
       }} />
 
-      <div style={{
+      <div className="grid-2" style={{
         position: 'relative', zIndex: 2, maxWidth: 1400, margin: '0 auto',
         padding: '140px 48px 100px',
-        display: 'grid', gridTemplateColumns: '1fr 1.3fr', gap: 80, alignItems: 'start',
+        alignItems: 'start',
       }}>
         <div>
           <Eyebrow>
@@ -108,10 +108,7 @@ const Enquire = forwardRef(function Enquire(props, ref) {
             specifics follow in a produced proposal.
           </Body>
           <Hairline style={{ marginTop: 56 }} />
-          <div style={{
-            marginTop: 24,
-            display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24,
-          }}>
+          <div className="grid-2" style={{ marginTop: 24, gap: 24 }}>
             <div>
               <div style={{ fontSize: 10, letterSpacing: 1.6, color: 'rgba(240,240,250,0.45)', textTransform: 'uppercase', marginBottom: 8 }}>Direct</div>
               <a href="mailto:collective@arc4collective.com" style={{
@@ -160,7 +157,7 @@ const Enquire = forwardRef(function Enquire(props, ref) {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
-              style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 28 }}
+              className="grid-2" style={{ gap: 28 }}
             >
               <input type="hidden" name="form-name" value="enquire" />
               <p hidden><label>Don’t fill this out: <input name="bot-field" onChange={() => {}} /></label></p>

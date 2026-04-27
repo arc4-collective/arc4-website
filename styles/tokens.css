@@ -313,6 +313,46 @@ html, body {
   gap: 32px;
 }
 
+.hero-season-mobile {
+  display: none;
+}
+
+.hero-season-desktop {
+  display: block;
+}
+
+.hero-metadata-bar {
+  width: 100%;
+}
+
+.hero-metadata-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  text-align: right;
+}
+
+.hero-metadata-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+}
+
+.hero-metadata-value {
+  color: #f0f0fa;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.hero-metadata-label {
+  color: rgba(240,240,250,0.55);
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 @media (max-width: 768px) {
   .grid-2 { grid-template-columns: 1fr; gap: 32px; }
   .grid-3 { grid-template-columns: 1fr; gap: 16px; }
@@ -322,6 +362,19 @@ html, body {
   .scene__content { padding: 60px 24px 36px; }
   .flex-gap-wide { gap: 16px; }
   .hero-bottom-meta { left: 20px; right: 20px; }
+  .hero-season-mobile { display: block; }
+  .hero-season-desktop { display: none; }
+  .hero-metadata-bar {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    left: 24px;
+    padding-top: 0;
+  }
+  .hero-metadata-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
 
 /* ============================================================

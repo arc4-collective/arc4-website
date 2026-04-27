@@ -20,7 +20,7 @@ function Hero({ onEnquire }) {
       }}>
         <div style={{ color: 'rgba(240,240,250,0.85)' }}>68°54′N · 27°01′E</div>
         <div>Saariselkä · Inari</div>
-        <div style={{ marginTop: 6, color: 'rgba(125,211,184,0.9)' }}>
+        <div className="hero-season-status hero-season-desktop" style={{ marginTop: 6, color: 'rgba(125,211,184,0.9)' }}>
           <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: 999, background: '#7dd3b8', marginRight: 8, verticalAlign: 'middle' }} />
           Winter season 2027 · open for briefs
         </div>
@@ -29,6 +29,9 @@ function Hero({ onEnquire }) {
       {/* Headline block */}
       <div className="rise-in" style={{ maxWidth: 1100 }}>
         <EyebrowDot>ARC4 Collective · Arctic Lapland · Est. Inari</EyebrowDot>
+        <div className="hero-season-status hero-season-mobile" style={{ marginTop: 12, color: 'rgba(125,211,184,0.9)', fontFamily: "'Barlow', Arial, sans-serif", fontSize: 10, letterSpacing: 1.6, textTransform: 'uppercase' }}>
+          Winter season 2027 · open for briefs
+        </div>
         <Title size="display" max={1100}>
           Arctic Experience<br/>Designers.
         </Title>
@@ -46,31 +49,23 @@ function Hero({ onEnquire }) {
         </div>
       </div>
 
-      <div style={{
+      <div className="hero-metadata-bar" style={{
         position: 'absolute', bottom: 24, left: 24, right: 24,
         display: 'grid', gap: 24,
         paddingTop: 24,
       }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
-          gap: 24,
-          fontFamily: "'Barlow', Arial, sans-serif",
-          textTransform: 'uppercase',
-          color: 'rgba(240,240,250,0.55)',
-          width: '100%',
-        }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-            <div style={{ color: 'rgba(240,240,250,0.85)', fontWeight: 700, fontSize: 14, letterSpacing: 1 }}>-32°C</div>
-            <div style={{ fontSize: 10, letterSpacing: 1.6 }}>Mean Jan low</div>
+        <div className="hero-metadata-row">
+          <div className="hero-metadata-item">
+            <div className="hero-metadata-value">4—60+</div>
+            <div className="hero-metadata-label">Guest scale</div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-            <div style={{ color: 'rgba(240,240,250,0.85)', fontWeight: 700, fontSize: 14, letterSpacing: 1 }}>14H</div>
-            <div style={{ fontSize: 10, letterSpacing: 1.6 }}>Polar night</div>
+          <div className="hero-metadata-item">
+            <div className="hero-metadata-value">14H</div>
+            <div className="hero-metadata-label">Polar night</div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-            <div style={{ color: 'rgba(240,240,250,0.85)', fontWeight: 700, fontSize: 14, letterSpacing: 1 }}>4—60+</div>
-            <div style={{ fontSize: 10, letterSpacing: 1.6 }}>Guest scale</div>
+          <div className="hero-metadata-item">
+            <div className="hero-metadata-value">-32°C</div>
+            <div className="hero-metadata-label">Mean Jan low</div>
           </div>
         </div>
       </div>

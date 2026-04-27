@@ -10,20 +10,15 @@ const Enquire = forwardRef(function Enquire(props, ref) {
   const [error, setError] = useState(null);
   const nameRef = useRef(null);
 
-  // URL-encode form fields for Netlify Forms submission
-  const encode = (data) => Object.keys(data)
-    .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
-    .join('&');
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
     setError(null);
     try {
-      const res = await fetch('/', {
+      const res = await fetch('https://formspree.io/f/mojyoaeg', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'enquire', ...form }),
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error('submit failed');
       setSubmitted(true);

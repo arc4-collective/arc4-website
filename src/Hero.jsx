@@ -21,7 +21,7 @@ function Hero({ onEnquire }) {
         id="hero"
         label="01 Hero"
         image="https://images.unsplash.com/photo-1483347756197-71ef80e95f73?q=80&w=2400"
-        align="center"
+        align="left"
         overlay="linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.85) 100%)"
       >
         <div style={{
@@ -31,6 +31,8 @@ function Hero({ onEnquire }) {
           flexDirection: 'column',
           gap: 20,
           maxWidth: '100%',
+          alignItems: 'flex-start',
+          textAlign: 'left',
         }}>
           {/* Eyebrow with aurora dot */}
           <EyebrowDot style={{ marginBottom: 0, fontSize: 11 }}>
@@ -58,11 +60,11 @@ function Hero({ onEnquire }) {
             Designed and produced across the Finnish Lapland to the wider Scandinavian Arctic.
           </Body>
 
-          {/* Buttons - full width */}
+          {/* Buttons - left-aligned, auto width */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 12 }}>
             <button onClick={onEnquire} style={{
-              width: '100%',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12,
+              width: 'auto',
+              display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 12,
               padding: '14px 20px',
               background: 'rgba(240,240,250,0.10)',
               border: '1px solid rgba(240,240,250,0.35)',
@@ -77,8 +79,8 @@ function Hero({ onEnquire }) {
               Enquire <ArrowR size={13} />
             </button>
             <a href="#experiences" style={{
-              width: '100%',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12,
+              width: 'auto',
+              display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 12,
               padding: '14px 20px',
               background: 'transparent',
               border: '1px solid rgba(240,240,250,0.25)',

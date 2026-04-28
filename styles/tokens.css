@@ -49,15 +49,15 @@
   --font-body:    'Barlow', 'D-DIN', Arial, Verdana, sans-serif;
 
   /* === Type scale (px) =================================== */
-  --fs-display:   48px;  /* hero */
-  --fs-h1:        40px;
-  --fs-h2:        32px;
-  --fs-h3:        22px;
-  --fs-body:      16px;
-  --fs-nav-bold:  13px;
-  --fs-nav:       12px;
-  --fs-caption:   12px;
-  --fs-micro:     10px;
+  --fs-display:   58px;  /* hero */
+  --fs-h1:        48px;
+  --fs-h2:        38px;
+  --fs-h3:        26px;
+  --fs-body:      19px;
+  --fs-nav-bold:  16px;
+  --fs-nav:       14px;
+  --fs-caption:   14px;
+  --fs-micro:     12px;
 
   /* === Letter-spacing (positive only, aerospace stencil) == */
   --ls-display:   0.96px;

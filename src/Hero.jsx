@@ -62,8 +62,8 @@ to feel the true Arctic.
       </div>
 
       <div className="hero-metadata-bar" style={{
-        position: 'absolute', bottom: 24, left: 24, right: 24,
-        display: 'grid', gap: 24,
+        position: 'absolute', bottom: 24, right: 24,
+        display: 'flex', justifyContent: 'flex-end', gap: 24,
         paddingTop: 24,
         paddingRight: 48,
         background: 'transparent',

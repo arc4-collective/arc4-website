@@ -41,13 +41,13 @@ function Hero({ onEnquire }) {
 
       {/* Headline block */}
       <div className="rise-in" style={{ maxWidth: 1100 }}>
-        <EyebrowDot style={{ marginBottom: isMobile ? 6 : 20, fontSize: isMobile ? 11 : 13 }}>
+        <EyebrowDot style={{ marginBottom: isMobile ? 6 : 20, fontSize: 11 }}>
           ARC4 Collective · Arctic Lapland · Est. Inari
         </EyebrowDot>
-        <Title size="display" max={1100}>
+        <Title size="display" max={1100} style={{ fontSize: '80px' }}>
           THIS IS THE DEEP NORTH.
         </Title>
-        <Body max={560} dim={0.85} style={{ marginTop: 28, fontSize: isMobile ? 16 : 18 }}>
+        <Body max={560} dim={0.85} style={{ marginTop: 28, fontSize: 18 }}>
           Corporate expeditions and private programmes, for those who want 
 to feel the true Arctic.
         </Body>
@@ -72,15 +72,15 @@ to feel the true Arctic.
         <div className="hero-metadata-row">
           <div className="hero-metadata-item">
             <div className="hero-metadata-value" style={{ fontSize: 14 }}>4—60+</div>
-            <div className="hero-metadata-label" style={{ fontSize: isMobile ? 9 : 11 }}>Guest scale</div>
+            <div className="hero-metadata-label" style={{ fontSize: 11 }}>Guest scale</div>
           </div>
           <div className="hero-metadata-item">
             <div className="hero-metadata-value" style={{ fontSize: 14 }}>14H</div>
-            <div className="hero-metadata-label" style={{ fontSize: isMobile ? 9 : 11 }}>Polar night</div>
+            <div className="hero-metadata-label" style={{ fontSize: 11 }}>Polar night</div>
           </div>
           <div className="hero-metadata-item">
             <div className="hero-metadata-value" style={{ fontSize: 14 }}>-32°C</div>
-            <div className="hero-metadata-label" style={{ fontSize: isMobile ? 9 : 11 }}>Mean Jan low</div>
+            <div className="hero-metadata-label" style={{ fontSize: 11 }}>Mean Jan low</div>
           </div>
         </div>
       </div>

@@ -45,11 +45,11 @@ function Hero({ onEnquire }) {
           ARC4 Collective · Arctic Lapland · Est. Inari
         </EyebrowDot>
         <Title size="display" max={1100}>
-          Arctic Experience<br/>Designers.
+          THIS IS THE DEEP NORTH.
         </Title>
         <Body max={560} dim={0.85} style={{ marginTop: 28, fontSize: isMobile ? 16 : 18 }}>
-          Bespoke offsites, expeditions and programmes for corporate groups and private clients.
-          Designed and produced across the Finnish Lapland to the wider Scandinavian Arctic.
+          Corporate expeditions and private programmes, for those who want 
+to feel the true Arctic.
         </Body>
         <div style={{ marginTop: 36, display: 'flex', gap: 14, flexWrap: 'wrap' }}>
           <GhostButton onClick={onEnquire}>

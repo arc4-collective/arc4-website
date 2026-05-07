@@ -3,9 +3,65 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ARC4 — Arctic Experience Designers</title>
+<title>ARC4 Collective — Arctic Corporate Retreats, Expeditions & Luxury Lapland Experiences</title>
+<meta name="description" content="ARC4 Collective designs and produces extraordinary Arctic experiences in Finnish Lapland — corporate retreats, wilderness expeditions and luxury programmes. Based in Saariselkä, Inari. Operators of the Arctic North.">
+<meta name="keywords" content="ARC4 Collective, ARC4 Oy, ARC4 Lapland, ARC4 Inari, ARC4 Saariselkä, ARC4 Snowmobile, ARC4 Guides, ARC4 Expeditions, Arctic Lapland corporate retreat, Finnish Lapland corporate offsite, corporate event Lapland Finland, Arctic team building event, tech company retreat Lapland, Arctic hackathon venue Finland, Helsinki tech company retreat Lapland, gaming company offsite Finland, AI company offsite Lapland, innovation retreat Finnish Lapland, luxury Lapland experience, executive retreat Arctic wilderness, incentive travel Finland Lapland, MICE travel Finland Arctic, bespoke Arctic travel Finland, DMC Finland Lapland, luxury travel operator Finnish Lapland, Saariselkä private tours, Saariselkä private snowmobile, Saariselkä private chef, Saariselkä private dinner, Saariselkä wilderness guide, snowmobile expedition Finland, aurora borealis private tour Lapland, northern lights tour private Finland, husky safari private Saariselkä, reindeer experience Inari Finland, ice fishing private guide Lapland, ski touring Saariselkä guided, Arctic charter experience Finland, event production partner Finland Lapland, ground handler Arctic Lapland, local event operator Finnish Lapland, experiential agency partner Lapland, turnkey event operator Lapland, film production fixer Finnish Lapland, Arctic filming location Finland, VC fund offsite Lapland, founder retreat Arctic, startup accelerator retreat Finland, Slush Arctic experience, Arctic corporate travel Europe, startup offsite Lapland, yritystilaisuus Lappi, yrityksen virkistyspäivä Lappi, tapahtumatuotanto Lappi, tapahtumajärjestäjä Saariselkä, luksus elämys Lappi, Arctic elämys Saariselkä, Lapin elämysmatka yrityksille, moottorikelkkasafari Saariselkä, erämaaruokailu Saariselkä, revontuli retkeily Inari, yksityinen opastettu retki Lappi, Inari eräopas, ohjelmapalvelut Lappi, kannustematka Lappi, Arctic elämystuotanto yritys, Saariselkä yksityinen illallinen">
+<meta name="robots" content="index, follow">
+<meta name="author" content="ARC4 Collective">
+<link rel="canonical" href="https://www.arc4collective.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.arc4collective.com/">
+<meta property="og:title" content="ARC4 Collective — Operators of the Arctic North">
+<meta property="og:description" content="Bespoke Arctic experiences for corporate groups and private clients across Finnish Lapland. We take you to places no one else can.">
+<meta property="og:image" content="https://www.arc4collective.com/assets/photos/hero.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="ARC4 Collective">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ARC4 Collective — Operators of the Arctic North">
+<meta name="twitter:description" content="Bespoke Arctic experiences for corporate groups and private clients across Finnish Lapland.">
+<meta name="twitter:image" content="https://www.arc4collective.com/assets/photos/hero.webp">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "ARC4 Collective",
+  "alternateName": ["ARC4 Oy", "ARC4 Lapland", "ARC4 Expeditions"],
+  "description": "ARC4 Collective designs and produces extraordinary Arctic experiences in Finnish Lapland — corporate retreats, wilderness expeditions and luxury programmes for discerning groups. Operators of the Arctic North.",
+  "url": "https://www.arc4collective.com",
+  "logo": "https://www.arc4collective.com/assets/arc4-wordmark.svg",
+  "image": "https://www.arc4collective.com/assets/photos/hero.webp",
+  "email": "collective@arc4collective.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kakslauttasentie 129",
+    "addressLocality": "Saariselkä",
+    "addressRegion": "Inari",
+    "addressCountry": "FI"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 68.54,
+    "longitude": 27.01
+  },
+  "areaServed": ["Finnish Lapland", "Saariselkä", "Inari", "UKK National Park", "Scandinavia", "Arctic"],
+  "serviceType": ["Corporate Retreats", "Arctic Expeditions", "Luxury Wilderness Experiences", "Team Building Events", "Snowmobile Expeditions", "Aurora Borealis Tours", "Wilderness Dinners", "Incentive Travel", "Event Production", "Private Arctic Tours", "Husky Safaris", "Reindeer Experiences"],
+  "priceRange": "$$$$",
+  "foundingDate": "2025",
+  "sameAs": []
+}
+</script>
+
 <link rel="stylesheet" href="styles/tokens.css">
 <link rel="icon" href="assets/arc4-mark.svg">
+<link rel="apple-touch-icon" href="assets/arc4-mark.svg">
 <style>
   html { scroll-behavior: smooth; }
   body {
@@ -52,10 +108,305 @@
     *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     html { scroll-behavior: auto; }
   }
+
+  /* SEO static layer — visually hidden, readable by crawlers */
+  .arc4-seo-layer {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
 </style>
 </head>
 <body>
 <div id="root"></div>
+
+<!--
+=============================================================================
+  ARC4 COLLECTIVE — STATIC SEO CONTENT LAYER
+  
+  WHY THIS EXISTS:
+  The site uses React + Babel CDN (client-side rendering). Google sees only
+  <div id="root"></div> before JavaScript runs. This static HTML block gives
+  Googlebot the full text content of every section immediately, without
+  waiting for JS to execute.
+  
+  HOW IT WORKS:
+  Visually hidden from users via .arc4-seo-layer CSS class. React renders
+  the designed site over the top. Users see the normal site. Google reads
+  this HTML on first crawl pass.
+  
+  NOT CLOAKING: The content is identical to what renders visually.
+  This is a legitimate "static content pre-population" technique.
+  
+  MAINTENANCE RULE:
+  When you update copy in any JSX component, update the matching section
+  here too. Both must stay in sync.
+  
+  Last updated: May 2026
+=============================================================================
+-->
+<div class="arc4-seo-layer" aria-hidden="true">
+
+  <header>
+    <a href="/">ARC4 Collective — Operators of the Arctic North</a>
+    <nav>
+      <a href="#experiences">Experiences</a>
+      <a href="#corporate">Corporate</a>
+      <a href="#territory">Territory</a>
+      <a href="#enquire">Enquire</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero">
+    <p>ARC4 Collective · Arctic Lapland · Est. Inari · 68°54′N 27°01′E</p>
+    <h1>Arctic Experience Designers.</h1>
+    <p>
+      Bespoke offsites, expeditions and programmes for corporate groups and
+      private clients. Designed and produced across Finnish Lapland to the
+      wider Scandinavian Arctic. Mean January low: −32°C. Polar night: 14 hours.
+      Guest scale: 4–60+. Winter season 2027 open for briefs.
+    </p>
+    <a href="#enquire">Plan your Arctic experience</a>
+  </section>
+
+  <!-- POSITIONING -->
+  <section id="positioning">
+    <h2>We don't book tours. We build experiences.</h2>
+    <p>
+      ARC4 is not a tour operator. We are the Operators of the Arctic North —
+      a collective of local guides, Sámi families, wilderness experts, chefs,
+      pilots and captains who together hold the keys to a world most people
+      will never see. From the ancient boreal forests of Inari and the open
+      fells of UKK National Park, to frozen tundra and the Barents Sea — we
+      open doors to the unknown Arctic.
+    </p>
+    <p>
+      For corporate groups seeking bold, purposeful offsites. For private
+      travellers seeking something rare and deeply personal. This is not a
+      destination you visit. This is a world we unlock for you.
+    </p>
+    <p>
+      Every program is designed from first principles. No off-the-shelf packages.
+      No shared groups. Just your people, the Arctic, and us.
+    </p>
+    <h3>Precision delivery</h3>
+    <p>Every logistics, activity, and hospitality element designed and managed in-house.</p>
+    <h3>Exclusive access</h3>
+    <p>Locations, venues and moments unavailable through any other operator in Finnish Lapland.</p>
+    <h3>End-to-end</h3>
+    <p>From first brief to final departure — nothing left to chance.</p>
+  </section>
+
+  <!-- EXPERIENCES -->
+  <section id="experiences">
+    <p>What we do</p>
+    <h2>Arctic experiences, fully designed.</h2>
+    <p>
+      Six core experience categories, each bespoke and fully managed.
+      Every program built around your group, your outcomes, your Arctic.
+    </p>
+
+    <article>
+      <h3>Executive Forums &amp; Corporate Offsites in Finnish Lapland</h3>
+      <p>Expedition · End-to-end · 4–60+ guests · Bespoke</p>
+      <p>
+        Full-scale corporate programs — from arrival logistics to wilderness
+        activities, workshops and departure. Delivered end-to-end. ARC4 designs
+        and produces complete corporate retreats and offsites in Finnish Lapland
+        for tech companies, VC firms, gaming studios and innovation-driven
+        organisations. Arctic hackathon venue Finland. Gaming company offsite
+        Finland. AI company offsite Lapland.
+      </p>
+    </article>
+
+    <article>
+      <h3>Snowmobile Expeditions — Saariselkä &amp; Finnish Lapland</h3>
+      <p>Expedition · Range 40–400 km · Group 6–24 · Winter only</p>
+      <p>
+        Guided long-distance snowmobile routes across open Arctic fells and
+        ancient boreal forest. Private snowmobile expeditions in Saariselkä and
+        Inari — terrain only a local guide can navigate safely. Moottorikelkkasafari
+        Saariselkä. Saariselkä private snowmobile tours.
+      </p>
+    </article>
+
+    <article>
+      <h3>Wilderness Dinners &amp; Arctic Cuisine</h3>
+      <p>Wilderness dining · Off-grid · Chef-led · 8–40 covers</p>
+      <p>
+        Private wilderness dinners in locations no restaurant can replicate.
+        Fire-lit dining under the Arctic sky. Saariselkä private dinner and
+        private chef experiences for corporate groups and private clients.
+        Erämaaruokailu Saariselkä. Saariselkä yksityinen illallinen.
+      </p>
+    </article>
+
+    <article>
+      <h3>Arctic Freeride — Backcountry Ski Touring Saariselkä</h3>
+      <p>Adventure · Backcountry · Heli-ski access · February–April</p>
+      <p>
+        Split-boarding, ski-touring and fat-bike lines across fell tops and
+        untracked timber in Finnish Lapland. Guided backcountry freeride and
+        ski touring in Saariselkä by locals who ride these slopes year-round.
+      </p>
+    </article>
+
+    <article>
+      <h3>Northern Lights Programs — Aurora Borealis Private Tours Lapland</h3>
+      <p>Natural wonder · KP-reactive · Private sites · October–March</p>
+      <p>
+        Private aurora borealis experiences from wilderness camps in Finnish
+        Lapland, far from light pollution. Northern lights private tour Lapland
+        in Inari and Saariselkä with fire, hot drinks and expert guides.
+        Revontuli retkeily Inari.
+      </p>
+    </article>
+
+    <article>
+      <h3>Wildlife Encounters — Reindeer, Husky &amp; King Crab</h3>
+      <p>Culture · Reindeer · Husky · Moose · King crab</p>
+      <p>
+        From reindeer experience Inari Finland to king crab fishing in the
+        Barents Sea. Husky safari private Saariselkä. Ice fishing private guide
+        Lapland. Access to Arctic wildlife and Sámi culture most travellers
+        never reach.
+      </p>
+    </article>
+
+    <a href="#enquire">Enquire about an experience</a>
+  </section>
+
+  <!-- CORPORATE -->
+  <section id="corporate">
+    <p>For corporate groups</p>
+    <h2>The Arctic offsite, fully delivered.</h2>
+    <p>
+      ARC4 designs and produces end-to-end corporate programs in Arctic Lapland.
+      From 4-person leadership retreats to 60+ guest hackathon events. Every
+      detail managed. Every moment designed.
+    </p>
+    <p>
+      We are the leading corporate event production operator in Finnish Lapland,
+      specialising in tech company offsites, gaming studio retreats, VC fund
+      offsites, startup accelerator retreat Finland programs and innovation
+      retreats. Helsinki tech company retreat Lapland. Arctic team building event.
+      Tapahtumatuotanto Lappi. Yritystilaisuus Lappi.
+    </p>
+
+    <h3>Precision delivery</h3>
+    <p>Every logistics, activity, and hospitality element designed and managed in-house.</p>
+    <h3>Scalable</h3>
+    <p>Corporate programs from 4 to 60+ guests. Day experiences to multi-day Arctic expeditions.</p>
+    <h3>Purposeful</h3>
+    <p>Experiences designed around your outcomes — team alignment, innovation, reward, connection.</p>
+    <h3>Exclusive access</h3>
+    <p>Locations, venues and moments unavailable through any other operator in Finnish Lapland.</p>
+
+    <h3>Past programs and key clients</h3>
+    <ul>
+      <li>
+        Supercell Oy — AI Hackathon / Arctic Bootcamp, Saariselkä, March 2026.
+        57+ guests. Full corporate production in Finnish Lapland.
+      </li>
+      <li>
+        Slush Connections — SC Hackathon, March 2026. Corporate event in Lapland
+        for the Slush startup ecosystem.
+      </li>
+      <li>
+        Hellon — Corporate retreat, Finnish Lapland, March 2026.
+      </li>
+      <li>
+        Lifeline Ventures — partner program, 2026.
+      </li>
+    </ul>
+
+    <h3>Who we work with</h3>
+    <p>
+      Tech companies based in Helsinki. Gaming companies (Supercell, Rovio type).
+      VC firms and startup ecosystems including Slush and Lifeline Ventures.
+      International corporate groups from US, UK, Netherlands and Germany.
+      DMC Finland Lapland. Incentive travel Finland Lapland. MICE travel
+      Finland Arctic. Ground handler Arctic Lapland. Experiential agency
+      partner Lapland. Kannustematka Lappi. Ohjelmapalvelut Lappi.
+    </p>
+
+    <a href="#enquire">Plan your corporate retreat</a>
+  </section>
+
+  <!-- TERRITORY -->
+  <section id="territory">
+    <p>Our territory</p>
+    <h2>From Inari to the Barents Sea.</h2>
+    <p>
+      ARC4 operates across the full breadth of Finnish Lapland — from the
+      ancient forests and frozen lakes of Inari, across the open fells of UKK
+      National Park, to the Barents Sea coastline in the far north. Terrain
+      most will never see. Territory we know completely.
+    </p>
+
+    <h3>Saariselkä, Inari — Home base</h3>
+    <p>
+      Our operational headquarters. Saariselkä wilderness guide services,
+      private tours and corporate events originate here. Gateway to the true
+      Arctic wilderness of Finnish Lapland. Inari eräopas. Yksityinen opastettu
+      retki Lappi.
+    </p>
+
+    <h3>UKK National Park — Fell expeditions</h3>
+    <p>
+      Urho Kekkonen National Park — 2,550 km² of pristine Arctic wilderness.
+      Open fells, ancient boreal forest, frozen rivers. Long-distance snowmobile
+      expeditions and backcountry ski touring in Finnish Lapland.
+    </p>
+
+    <h3>Barents Sea region — Extended programs</h3>
+    <p>
+      King crab fishing, Sámi cultural experiences and the remotest Arctic
+      programs we offer. Available for multi-day expedition clients.
+    </p>
+
+    <p>Coordinates: 68°54′N · 27°01′E · Finnish Lapland · Arctic Circle</p>
+  </section>
+
+  <!-- ENQUIRE -->
+  <section id="enquire">
+    <p>Get in touch</p>
+    <h2>Tell us what you're looking for.</h2>
+    <p>
+      Every program begins with a conversation. Describe your group, your dates,
+      your ambitions — we'll design something worthy of the Arctic. We typically
+      respond within 24 hours.
+    </p>
+    <address>
+      <p>ARC4 Collective — ARC4 Oy</p>
+      <p>Kakslauttasentie 129, Saariselkä, Inari, Finland</p>
+      <a href="mailto:collective@arc4collective.com">collective@arc4collective.com</a>
+    </address>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>ARC4 Collective — Operators of the Arctic North</p>
+    <p>Kakslauttasentie 129, Saariselkä, Inari, Finland</p>
+    <a href="mailto:collective@arc4collective.com">collective@arc4collective.com</a>
+    <a href="https://www.arc4collective.com">arc4collective.com</a>
+    <p>© 2026 ARC4 Oy · Business ID: Y-3587895-6</p>
+    <nav>
+      <a href="#experiences">Experiences</a>
+      <a href="#corporate">Corporate</a>
+      <a href="#territory">Territory</a>
+      <a href="#enquire">Enquire</a>
+    </nav>
+  </footer>
+
+</div>
+<!-- END ARC4 SEO LAYER -->
 
 <!-- Netlify Forms: this hidden static form is what Netlify's build bot scans at deploy time.
      The real (React) form submits to the same form-name via fetch. Do not remove.

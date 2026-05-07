@@ -41,21 +41,21 @@ function Hero({ onEnquire }) {
 
       {/* Headline block */}
       <div className="rise-in" style={{ maxWidth: 1100 }}>
-        <EyebrowDot style={{ marginBottom: isMobile ? 6 : 20, fontSize: 11 }}>
+        <EyebrowDot style={{ marginBottom: isMobile ? 6 : 20, fontSize: isMobile ? 9 : 11 }}>
           ARC4 Collective · Arctic Lapland · Est. Inari
         </EyebrowDot>
-        <Title size="display" max={1100} style={{ fontSize: '80px' }}>
-          THIS IS THE DEEP NORTH.
+        <Title size="display" max={1100} style={{ fontSize: isMobile ? 'clamp(32px, 8vw, 48px)' : '80px' }}>
+          ARCTIC EXPERIENCE DESIGNERS.
         </Title>
-        <Body max={560} dim={0.85} style={{ marginTop: 28, fontSize: 18 }}>
+        <Body max={560} dim={0.85} style={{ marginTop: 28, fontSize: isMobile ? 13 : 18 }}>
           Corporate expeditions and private programmes, for those who want 
 to feel the true Arctic.
         </Body>
         <div style={{ marginTop: 36, display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-          <GhostButton onClick={onEnquire}>
+          <GhostButton onClick={onEnquire} style={{ fontSize: isMobile ? 12 : 13 }}>
             Enquire <ArrowR />
           </GhostButton>
-          <GhostButton href="#experiences" variant="faint">
+          <GhostButton href="#experiences" variant="faint" style={{ fontSize: isMobile ? 12 : 13 }}>
             Experiences <ArrowD />
           </GhostButton>
         </div>

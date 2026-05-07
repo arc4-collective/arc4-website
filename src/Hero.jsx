@@ -62,25 +62,50 @@ to feel the true Arctic.
       </div>
 
       <div className="hero-metadata-bar" style={{
-        position: 'absolute', bottom: 24, right: 24,
-        display: 'flex', justifyContent: 'flex-end', gap: 24,
+        position: 'absolute',
+        top: isMobile ? '50%' : undefined,
+        bottom: isMobile ? undefined : 24,
+        right: 24,
+        transform: isMobile ? 'translateY(-50%)' : undefined,
+        display: 'flex',
+        flexDirection: isMobile ? 'column' : 'row',
+        alignItems: isMobile ? 'flex-end' : undefined,
+        justifyContent: isMobile ? undefined : 'flex-end',
+        gap: isMobile ? 20 : 24,
         paddingTop: 24,
         paddingRight: 48,
         background: 'transparent',
         backgroundColor: 'transparent',
       }}>
-        <div className="hero-metadata-row">
+        <div className="hero-metadata-row" style={{
+          display: 'flex',
+          flexDirection: isMobile ? 'column' : 'row',
+          alignItems: isMobile ? 'flex-end' : 'center',
+          gap: isMobile ? 20 : 24,
+        }}>
           <div className="hero-metadata-item">
-            <div className="hero-metadata-value" style={{ fontSize: 14 }}>4—60+</div>
-            <div className="hero-metadata-label" style={{ fontSize: 11 }}>Guest scale</div>
+            <div className="hero-metadata-value" style={{ fontSize: isMobile ? 13 : 14, fontWeight: isMobile ? 700 : 400, color: isMobile ? '#f0f0fa' : undefined }}>
+              4—60+
+            </div>
+            <div className="hero-metadata-label" style={{ fontSize: isMobile ? 9 : 11, color: isMobile ? 'rgba(240,240,250,0.55)' : undefined, letterSpacing: isMobile ? 1 : undefined, textTransform: isMobile ? 'uppercase' : undefined }}>
+              Guest scale
+            </div>
           </div>
           <div className="hero-metadata-item">
-            <div className="hero-metadata-value" style={{ fontSize: 14 }}>14H</div>
-            <div className="hero-metadata-label" style={{ fontSize: 11 }}>Polar night</div>
+            <div className="hero-metadata-value" style={{ fontSize: isMobile ? 13 : 14, fontWeight: isMobile ? 700 : 400, color: isMobile ? '#f0f0fa' : undefined }}>
+              14H
+            </div>
+            <div className="hero-metadata-label" style={{ fontSize: isMobile ? 9 : 11, color: isMobile ? 'rgba(240,240,250,0.55)' : undefined, letterSpacing: isMobile ? 1 : undefined, textTransform: isMobile ? 'uppercase' : undefined }}>
+              Polar night
+            </div>
           </div>
           <div className="hero-metadata-item">
-            <div className="hero-metadata-value" style={{ fontSize: 14 }}>-32°C</div>
-            <div className="hero-metadata-label" style={{ fontSize: 11 }}>Mean Jan low</div>
+            <div className="hero-metadata-value" style={{ fontSize: isMobile ? 13 : 14, fontWeight: isMobile ? 700 : 400, color: isMobile ? '#f0f0fa' : undefined }}>
+              -32°C
+            </div>
+            <div className="hero-metadata-label" style={{ fontSize: isMobile ? 9 : 11, color: isMobile ? 'rgba(240,240,250,0.55)' : undefined, letterSpacing: isMobile ? 1 : undefined, textTransform: isMobile ? 'uppercase' : undefined }}>
+              Mean Jan low
+            </div>
           </div>
         </div>
       </div>

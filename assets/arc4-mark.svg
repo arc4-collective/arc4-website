@@ -1,8 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
-  
-  <rect x="1" y="1" width="62" height="62" stroke="#f0f0fa" stroke-width="1.5" fill="none"></rect>
-  <text x="32" y="46" text-anchor="middle" fill="#f0f0fa" font-family="Barlow, &#39;D-DIN-Bold&#39;, Arial, sans-serif" font-weight="700" font-size="34" letter-spacing="2">A4</text>
-  
-  <path d="M1,1 L8,1 M1,1 L1,8" stroke="#7dd3b8" stroke-width="1.5"></path>
-  <path d="M63,63 L56,63 M63,63 L63,56" stroke="#7dd3b8" stroke-width="1.5"></path>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="106.269" height="88.2017" viewBox="0 0 106.269 88.2017">
+<path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1" d="M 52.125 9.929688 L 90.992188 76.976562 C 85.398438 77.003906 80.210938 73.246094 77.386719 68.421875 L 51.929688 24.949219 L 51.796875 24.726562 L 26.207031 68.421875 C 23.382812 73.246094 18.199219 77.003906 12.605469 76.976562 L 51.796875 9.367188 Z M 52.125 9.929688 "/>
+<path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1" d="M 49.503906 52.308594 L 51.929688 44.390625 L 54.355469 52.308594 L 62.273438 54.734375 L 54.355469 57.164062 L 51.929688 65.082031 L 49.503906 57.164062 L 41.585938 54.734375 Z M 49.503906 52.308594 "/>
 </svg>

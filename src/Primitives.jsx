@@ -81,7 +81,7 @@ function Title({ children, size = 'display', max = 920, color, tag: Tag = 'h2', 
     h3:      { fs: 22, ls: 0.5 },
   }[size] || { fs: 48, ls: 0.96 };
   return (
-    <Tag style={{
+    <Tag className={className} style={{
       fontFamily: "'Barlow', Arial, sans-serif",
       fontSize: sizes.fs, fontWeight: 700, lineHeight: 0.98,
       letterSpacing: sizes.ls + 'px',

@@ -313,45 +313,78 @@ html, body {
   gap: 32px;
 }
 
-.hero-season-mobile {
-  display: none;
-}
-
-.hero-season-desktop {
-  display: block;
-}
-
-.hero-metadata-bar {
-  width: 100%;
-  background: transparent;
-  background-color: transparent;
-}
-
-.hero-metadata-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+/* ============================================================
+   Hero — all layout driven by CSS media queries, no JS branches.
+   Desktop: coords cluster absolute top-right, metadata absolute
+   bottom-right, content in scene__content (align=bottom).
+   Mobile: coords hidden, everything in normal flow, no absolutes
+   over text.
+   ============================================================ */
+.hero-coords {
+  position: absolute;
+  top: 110px; right: 48px;
+  z-index: 3;
   text-align: right;
-}
-
-.hero-metadata-item {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  text-align: right;
-}
-
-.hero-metadata-value {
-  color: #f0f0fa;
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-.hero-metadata-label {
+  font-family: 'Barlow', Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
   color: rgba(240,240,250,0.55);
-  font-size: 9px;
+  line-height: 1.8;
+}
+.hero-coords__primary { color: rgba(240,240,250,0.85); }
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Barlow', Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #FA4616;
+}
+.hero-status__dot {
+  display: inline-block;
+  width: 8px; height: 8px; border-radius: 999px;
+  background: #FA4616;
+  margin-right: 8px;
+}
+.hero-status--desktop { margin-top: 6px; }
+.hero-status--mobile { display: none; }
+
+.hero-content { max-width: 1100px; }
+
+.hero-buttons {
+  margin-top: 36px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-meta {
+  position: absolute;
+  bottom: 24px; right: 24px;
+  padding-right: 48px;
+  display: flex;
+  gap: 24px;
+  z-index: 3;
+}
+.hero-meta__item {
+  display: flex; flex-direction: column; gap: 4px;
+  text-align: right;
+}
+.hero-meta__value {
+  font-family: 'Barlow', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
   letter-spacing: 1px;
+  color: #f0f0fa;
+}
+.hero-meta__label {
+  font-family: 'Barlow', Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: rgba(240,240,250,0.55);
   text-transform: uppercase;
 }
 
@@ -363,39 +396,46 @@ html, body {
   .section-padding { padding: 80px 24px 60px; }
   .scene__content { padding: 60px 24px 36px; }
   .flex-gap-wide { gap: 16px; }
-  .hero-bottom-meta { left: 20px; right: 20px; }
-  .hero-season-mobile { display: block; }
-  .hero-season-desktop { display: none; }
-  .hero-metadata-bar {
-    position: absolute;
-    bottom: 24px;
-    right: 24px;
-    left: 24px;
-    padding-top: 0;
+
+  /* Hero: single-column normal flow, nothing absolute over text. */
+  .hero-coords { display: none; }
+
+  #hero .scene__content {
+    justify-content: flex-start;
+    padding: 96px 24px 40px;
   }
-  .hero-metadata-row {
-    grid-template-columns: 1fr;
+
+  .hero-content { max-width: 100%; width: 100%; }
+
+  .hero-eyebrow { font-size: 9px !important; margin-bottom: 12px !important; }
+  .hero-title { font-size: clamp(36px, 10vw, 52px) !important; }
+  #hero .hero-content > p { font-size: 14px !important; margin-top: 20px !important; }
+
+  .hero-status--mobile {
+    display: inline-flex;
+    margin-top: 24px;
+    font-size: 10px;
+  }
+  .hero-status--desktop { display: none; }
+
+  .hero-buttons {
+    margin-top: 28px;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 12px;
   }
-}
 
-@media (min-width: 769px) {
-  .hero-metadata-bar {
-    padding-bottom: 32px;
-    background: transparent;
-    background-color: transparent;
+  .hero-meta {
+    position: static;
+    margin-top: 40px;
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
   }
-  .hero-metadata-value {
-    font-size: 22px;
-    font-weight: 700;
-    color: #f0f0fa;
-  }
-  .hero-metadata-label {
-    font-size: 11px;
-    font-weight: 400;
-    color: rgba(240,240,250,0.55);
-    letter-spacing: 1.5px;
-  }
+  .hero-meta__item { text-align: left; }
+  .hero-meta__value { font-size: 13px; font-weight: 700; }
+  .hero-meta__label { font-size: 9px; letter-spacing: 1px; }
 }
 
 /* ============================================================

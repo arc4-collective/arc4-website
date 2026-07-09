@@ -65,8 +65,8 @@ function EyebrowDot({ children, style, className }) {
   return (
     <Eyebrow style={style} className={className}>
       <span style={{
-        width: 6, height: 6, borderRadius: 999,
-        background: '#7dd3b8', boxShadow: '0 0 14px rgba(125,211,184,0.6)',
+        width: 8, height: 8, borderRadius: 999,
+        background: 'var(--mission-orange)',
       }} />
       {children}
     </Eyebrow>

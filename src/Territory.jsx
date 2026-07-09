@@ -17,7 +17,7 @@ function Territory() {
 
       <div style={{ position: 'relative', zIndex: 2, padding: '140px 48px 100px', maxWidth: 1400, margin: '0 auto' }}>
         <Eyebrow>
-          <span style={{ width: 20, height: 1, background: 'rgba(125,211,184,0.7)' }} />
+          <span style={{ width: 20, height: 1, background: 'rgba(240,240,250,0.35)' }} />
           05 · The Territory
         </Eyebrow>
         <div className="grid-2" style={{ gap: 80, alignItems: 'end' }}>

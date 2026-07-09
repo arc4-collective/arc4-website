@@ -3,8 +3,9 @@
    ------------------------------------------------------------
    Aerospace-minimal system ported to Arctic luxury.
    Pure black canvas, spectral white, and a single accent
-   drawn from the aurora. Typography is industrial DIN —
-   universal uppercase, positive tracking, two weights.
+   — Mission Orange — reserved for commitment moments.
+   Typography is industrial DIN — universal uppercase,
+   positive tracking, two weights.
    ============================================================ */
 
 /* ---- Fonts --------------------------------------------------
@@ -31,11 +32,10 @@
   --ghost-border:     rgba(240, 240, 250, 0.35);
   --ghost-border-lo:  rgba(240, 240, 250, 0.15);
 
-  /* === Aurora accent =====================================
-     Used *sparingly* — status dots, highlight rules, the
-     occasional hairline. Never as a fill color for blocks. */
-  --aurora:           #7dd3b8;   /* soft mint-teal, borealis */
-  --aurora-dim:       rgba(125, 211, 184, 0.35);
+  /* === Mission Orange ====================================
+     Primary CTA accent, one orange moment per viewport,
+     only where commitment is required (request action + status dot). */
+  --mission-orange:   #FA4616;
 
   /* === Semantic FG / BG =================================== */
   --bg:               var(--space-black);

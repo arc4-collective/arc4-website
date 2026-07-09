@@ -33,8 +33,8 @@ function Hero({ onEnquire }) {
       }}>
         <div style={{ color: 'rgba(240,240,250,0.85)' }}>68°54′N · 27°01′E</div>
         <div>Saariselkä · Inari</div>
-        <div className="hero-season-status hero-season-desktop" style={{ marginTop: 6, color: 'rgba(125,211,184,0.9)' }}>
-          <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: 999, background: '#7dd3b8', marginRight: 8, verticalAlign: 'middle' }} />
+        <div className="hero-season-status hero-season-desktop" style={{ marginTop: 6, color: '#FA4616' }}>
+          <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: 999, background: '#FA4616', marginRight: 8, verticalAlign: 'middle' }} />
           Winter season 2027 · open for briefs
         </div>
       </div>

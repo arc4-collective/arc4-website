@@ -44,7 +44,7 @@ function Corporate({ onEnquire }) {
         <div className="grid-2" style={{ alignItems: 'start' }}>
           <div>
             <Eyebrow>
-              <span style={{ width: 20, height: 1, background: 'rgba(125,211,184,0.7)' }} />
+              <span style={{ width: 20, height: 1, background: 'rgba(240,240,250,0.35)' }} />
               04 · Corporate
             </Eyebrow>
             <Title size="h1" max={640}>
@@ -76,7 +76,7 @@ function Corporate({ onEnquire }) {
               {pillars.map((p) => (
                 <div key={p.n} style={{ background: '#000', padding: '28px 24px 32px' }}>
                   <div style={{
-                    fontSize: 10, letterSpacing: 1.6, color: 'rgba(125,211,184,0.9)',
+                    fontSize: 10, letterSpacing: 1.6, color: 'rgba(240,240,250,0.6)',
                     textTransform: 'uppercase', marginBottom: 18,
                   }}>{p.n}</div>
                   <div style={{

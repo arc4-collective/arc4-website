@@ -35,7 +35,7 @@ function Positioning() {
         <div className="grid-2" style={{ gap: 64, alignItems: 'start' }}>
           <div>
             <Eyebrow>
-              <span style={{ width: 20, height: 1, background: 'rgba(125,211,184,0.7)' }} />
+              <span style={{ width: 20, height: 1, background: 'rgba(240,240,250,0.35)' }} />
               02 · Position
             </Eyebrow>
             <div style={{

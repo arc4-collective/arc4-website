@@ -40,7 +40,7 @@ function Collective() {
         <div className="grid-2" style={{ gap: 64, alignItems: 'end', marginBottom: 72 }}>
           <div>
             <Eyebrow>
-              <span style={{ width: 20, height: 1, background: 'rgba(125,211,184,0.7)' }} />
+              <span style={{ width: 20, height: 1, background: 'rgba(240,240,250,0.35)' }} />
               06 · Story
             </Eyebrow>
             <Title size="h1" max={520} style={{ marginTop: 8 }}>
@@ -83,7 +83,7 @@ function Collective() {
                 }}>{m.name}</div>
                 <div style={{
                   marginTop: 6, fontSize: 11, letterSpacing: 1.4,
-                  color: 'rgba(125,211,184,0.85)', textTransform: 'uppercase',
+                  color: 'rgba(240,240,250,0.6)', textTransform: 'uppercase',
                 }}>{m.role}</div>
                 <div style={{
                   marginTop: 4, fontSize: 10, letterSpacing: 1.4,

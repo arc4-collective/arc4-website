@@ -53,7 +53,7 @@ const Enquire = forwardRef(function Enquire(props, ref) {
   const handleSizeChange = useCallback((size) => setForm(f => ({ ...f, size })), []);
 
   const handleInputFocus = useCallback((e) => {
-    e.currentTarget.style.borderColor = 'rgba(125,211,184,0.8)';
+    e.currentTarget.style.borderColor = 'rgba(240,240,250,0.7)';
   }, []);
 
   const handleInputBlur = useCallback((e) => {
@@ -106,7 +106,7 @@ const Enquire = forwardRef(function Enquire(props, ref) {
       }}>
         <div>
           <Eyebrow>
-            <span style={{ width: 20, height: 1, background: 'rgba(125,211,184,0.7)' }} />
+            <span style={{ width: 20, height: 1, background: 'rgba(240,240,250,0.35)' }} />
             07 · Enquire
           </Eyebrow>
           <Title size="h1" max={540}>
@@ -125,7 +125,7 @@ const Enquire = forwardRef(function Enquire(props, ref) {
               <a href="mailto:collective@arc4collective.com" style={{
                 fontFamily: "'Barlow', Arial, sans-serif",
                 fontSize: 15, letterSpacing: 0.4, color: '#f0f0fa',
-                textDecoration: 'none', borderBottom: '1px solid rgba(125,211,184,0.5)', paddingBottom: 2,
+                textDecoration: 'none', borderBottom: '1px solid rgba(240,240,250,0.35)', paddingBottom: 2,
               }}>collective@arc4collective.com</a>
             </div>
             <div>
@@ -146,8 +146,8 @@ const Enquire = forwardRef(function Enquire(props, ref) {
         }}>
           {submitted ? (
             <div style={{ minHeight: 480, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <div style={{ fontSize: 10, letterSpacing: 1.6, color: 'rgba(125,211,184,0.9)', textTransform: 'uppercase', marginBottom: 20 }}>
-                <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: 999, background: '#7dd3b8', marginRight: 10, verticalAlign: 'middle' }} />
+              <div style={{ fontSize: 10, letterSpacing: 1.6, color: '#FA4616', textTransform: 'uppercase', marginBottom: 20 }}>
+                <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: 999, background: '#FA4616', marginRight: 10, verticalAlign: 'middle' }} />
                 Brief received
               </div>
               <Title size="h2" max={520}>
@@ -294,8 +294,22 @@ const Enquire = forwardRef(function Enquire(props, ref) {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="ghost-link"
-                  style={{ padding: '18px 32px', cursor: submitting ? 'wait' : 'pointer', opacity: submitting ? 0.6 : 1 }}
+                  style={{
+                    display: 'inline-flex', alignItems: 'center', gap: 14,
+                    padding: '18px 32px',
+                    background: '#FA4616',
+                    border: 'none',
+                    borderRadius: 32,
+                    color: '#fff',
+                    fontFamily: "'Barlow', Arial, sans-serif",
+                    fontSize: 13, fontWeight: 700, letterSpacing: 1.17,
+                    textTransform: 'uppercase',
+                    cursor: submitting ? 'wait' : 'pointer',
+                    opacity: submitting ? 0.6 : 1,
+                    transition: 'background 180ms cubic-bezier(0.16,1,0.3,1)',
+                  }}
+                  onMouseEnter={e => { if (!submitting) e.currentTarget.style.background = '#ff5a2e'; }}
+                  onMouseLeave={e => { if (!submitting) e.currentTarget.style.background = '#FA4616'; }}
                 >
                   {submitting ? 'Sending…' : <>Send brief <ArrowR /></>}
                 </button>

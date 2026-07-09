@@ -159,7 +159,7 @@ function Experiences() {
         }}>
           <div>
             <Eyebrow>
-              <span style={{ width: 20, height: 1, background: 'rgba(125,211,184,0.7)' }} />
+              <span style={{ width: 20, height: 1, background: 'rgba(240,240,250,0.35)' }} />
               03 · Catalogue
             </Eyebrow>
             <Title size="h1" max={500} style={{ marginTop: 8 }}>
